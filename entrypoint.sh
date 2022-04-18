@@ -16,6 +16,6 @@ else
 fi
 time=$(date)
 echo "-----------------------------"
-echo "| Files successfully copied |"
+echo "| Files copied successfully |"
 echo "-----------------------------"
 echo "::set-output name=time::$time"
