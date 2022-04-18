@@ -1,8 +1,8 @@
 # Runs on Alpine container, latest version.
 FROM alpine
 # Copy the script to the home directory of the container.
-COPY entrypoint.sh /home/entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
 # Grant executable permission on the script.
-RUN ["chmod", "+x", "/home/entrypoint.sh"]
+RUN ["chmod", "+x", "/entrypoint.sh"]
 # Runs the script.
-ENTRYPOINT [ "/home/entrypoint.sh" ]
+ENTRYPOINT [ "/entrypoint.sh" ]

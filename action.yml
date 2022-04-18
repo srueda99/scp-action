@@ -30,7 +30,7 @@ inputs:
     description: 'Passphrase for SSH key'
 outputs:
   time:
-    description: 'Returns the result'
+    description: 'Returns the time when the script ran'
 runs:
   using: 'docker'
   image: 'Dockerfile'

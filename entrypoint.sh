@@ -14,4 +14,8 @@ else
     # Runs the SCP command
     sshpass -p $INPUT_PASSWORD scp -P $INPUT_PORT -o StrictHostKeyChecking=no $INPUT_ORIGIN "$INPUT_USERNAME"@"$INPUT_HOST":"$INPUT_DESTINATION"
 fi
-echo "Files successfully copied"
+time=$(date)
+echo "-----------------------------"
+echo "| Files successfully copied |"
+echo "-----------------------------"
+echo "::set-output name=time::$time"
