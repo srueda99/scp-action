@@ -1,0 +1,40 @@
+name: 'SCP Action'
+description: 'Copies the files from your repository to a remote host using SCP'
+author: 'Sebastian Rueda'
+inputs:
+  # $1
+  port:
+    description: 'Port for SCP'
+    default: 22
+  # $2
+  host:
+    description: 'IP Address or DNS of your target host'
+  # $3
+  target:
+    description: 'Destination route folder'
+  # $4
+  username:
+    description: 'User for remote connection'
+  # $5
+  password:
+    description: 'Password for the user'
+  # $6
+  key:
+    description: 'Private SSH key'
+  # $7
+  passphrase:
+    description: 'Passphrase for SSH key'
+outputs:
+  time:
+    description: 'Returns the result'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.port }}
+    - ${{ inputs.host }}
+    - ${{ inputs.target }}
+    - ${{ inputs.username }}
+    - ${{ inputs.password }}
+    - ${{ inputs.key }}
+    - ${{ inputs.passphrase }}

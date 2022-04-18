@@ -1,0 +1,19 @@
+name: Super SCP Action
+on: [push]
+jobs:
+  scp:
+    name: SCP Copy
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v1
+
+    - name: Copy using key
+      id: key-job
+      uses: srueda99/scp-action@v1
+      with:
+        port: 22
+        host:
+        target: "/home"
+        username:
+        key:
