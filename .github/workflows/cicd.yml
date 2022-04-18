@@ -18,5 +18,6 @@ jobs:
         destination: "/home/${{ secrets.SERVER_USERNAME }}/"
         username: ${{ secrets.SERVER_USERNAME }}
         key: ${{ secrets.SERVER_KEY }}
+
     - name: Last run
-        run: echo "Last run on ${{ steps.key-job.outputs.time }}"
+      run: echo "Last run on ${{ steps.key-job.outputs.time }}"
