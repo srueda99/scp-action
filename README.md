@@ -1,5 +1,5 @@
 # SCP ACTION
-## By SRUEDA99
+***By SRUEDA99***
 
 ## Overview
 This action to copy the files from your repository to a remote server using **SCP** (Secure Copy Protocol).
@@ -10,19 +10,21 @@ You must give:
 - The `username` that will be used in the remote server.
 - The `destination` folder, where the content will be copied.
 - The `password` for the user or the private `key` in case the connection is based on SSH keys.
+
 Optional:
 - The `origin` folder is set by default as _"./*"_ but you can also specify it.
 - The `port` is set as **22** by default, you can also specify another one.
 - The `passphrase` if necessary.
+
+**IMPORTANT**
 ```
-**Important**
 Use Github secrets to give these parameters.
 ```
 
 ## Examples
 **With password**
 ```
-name: Copy using password
+name: copy using password
 uses: srueda99/scp-action@v3
 with:
     port: 22
@@ -34,7 +36,7 @@ with:
 
 **With key**
 ```
-name: Copy using key
+name: copy using key
 uses: srueda99/scp-action@v3
 with:
     port: 22
@@ -46,7 +48,7 @@ with:
 
 **With origin folder**
 ```
-name: Copy using password
+name: copy using password
 uses: srueda99/scp-action@v3
 with:
     port: 22
@@ -59,7 +61,7 @@ with:
 
 **With passphrase**
 ```
-name: Copy using key
+name: copy using key
 uses: srueda99/scp-action@v3
 with:
     port: 22
