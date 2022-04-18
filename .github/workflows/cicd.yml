@@ -10,10 +10,11 @@ jobs:
 
     - name: Copy using key
       id: key-job
-      uses: srueda99/scp-action@latest
+      uses: srueda99/scp-action@v4
       with:
         port: 22
         host: ${{ secrets.SERVER_ADDRESS }}
+        origin: "./*"
         destination: "/home/${{ secrets.SERVER_USERNAME }}/"
         username: ${{ secrets.SERVER_USERNAME }}
         key: ${{ secrets.SERVER_KEY }}

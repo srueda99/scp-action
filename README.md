@@ -12,7 +12,7 @@ You must give:
 - The `password` for the user or the private `key` in case the connection is based on SSH keys.
 
 Optional:
-- The `origin` folder is set by default as _"./*"_ but you can also specify it.
+- The `origin` folder is set by default as __"./*"__ but you can also specify it.
 - The `port` is set as **22** by default, you can also specify another one.
 - The `passphrase` if necessary.
 
@@ -25,7 +25,7 @@ Use Github secrets to give these parameters.
 **With password**
 ```
 name: copy using password
-uses: srueda99/scp-action@v3
+uses: srueda99/scp-action@v4
 with:
     port: 22
     host: ${{ secrets.SERVER_ADDRESS }}
@@ -37,7 +37,7 @@ with:
 **With key**
 ```
 name: copy using key
-uses: srueda99/scp-action@v3
+uses: srueda99/scp-action@v4
 with:
     port: 22
     host: ${{ secrets.SERVER_ADDRESS }}
@@ -49,7 +49,7 @@ with:
 **With origin folder**
 ```
 name: copy using password
-uses: srueda99/scp-action@v3
+uses: srueda99/scp-action@v4
 with:
     port: 22
     host: ${{ secrets.SERVER_ADDRESS }}
@@ -62,7 +62,7 @@ with:
 **With passphrase**
 ```
 name: copy using key
-uses: srueda99/scp-action@v3
+uses: srueda99/scp-action@v4
 with:
     port: 22
     host: ${{ secrets.SERVER_ADDRESS }}
