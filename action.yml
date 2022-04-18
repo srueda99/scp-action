@@ -10,18 +10,22 @@ inputs:
   host:
     description: 'IP Address or DNS of your target host'
   # $3
-  target:
-    description: 'Destination route folder'
+  origin:
+    description: 'Source route folder'
+    default: "./*"
   # $4
+  destination:
+    description: 'Destination route folder'
+  # $5
   username:
     description: 'User for remote connection'
-  # $5
+  # $6
   password:
     description: 'Password for the user'
-  # $6
+  # $7
   key:
     description: 'Private SSH key'
-  # $7
+  # $8
   passphrase:
     description: 'Passphrase for SSH key'
 outputs:
@@ -30,11 +34,12 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.port }}
-    - ${{ inputs.host }}
-    - ${{ inputs.target }}
-    - ${{ inputs.username }}
-    - ${{ inputs.password }}
-    - ${{ inputs.key }}
-    - ${{ inputs.passphrase }}
+  # args:
+  #   - ${{ inputs.port }}
+  #   - ${{ inputs.host }}
+  #   - ${{ inputs.origin }}
+  #   - ${{ inputs.destination }}
+  #   - ${{ inputs.username }}
+  #   - ${{ inputs.password }}
+  #   - ${{ inputs.key }}
+  #   - ${{ inputs.passphrase }}

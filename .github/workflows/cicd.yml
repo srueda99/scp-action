@@ -13,7 +13,7 @@ jobs:
       uses: srueda99/scp-action@v1
       with:
         port: 22
-        host:
-        target: "/home"
-        username:
-        key:
+        host: ${{ secrets.SERVER_ADDRESS }}
+        destination: "/home/${{ secrets.SERVER_USERNAME }}/"
+        username: ${{ secrets.SERVER_USERNAME }}
+        key: ${{ secrets.SERVER_KEY }}
