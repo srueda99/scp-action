@@ -34,12 +34,6 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  # args:
-  #   - ${{ inputs.port }}
-  #   - ${{ inputs.host }}
-  #   - ${{ inputs.origin }}
-  #   - ${{ inputs.destination }}
-  #   - ${{ inputs.username }}
-  #   - ${{ inputs.password }}
-  #   - ${{ inputs.key }}
-  #   - ${{ inputs.passphrase }}
+branding:
+  icon: 'send'
+  color: 'black'
