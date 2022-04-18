@@ -10,7 +10,7 @@ jobs:
 
     - name: Copy using key
       id: key-job
-      uses: srueda99/scp-action@v5
+      uses: srueda99/scp-action@v6
       with:
         port: 22
         host: ${{ secrets.SERVER_ADDRESS }}
