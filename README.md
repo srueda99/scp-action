@@ -72,4 +72,4 @@ with:
     passphrase: ${{ secrets.SERVER_PASSPHRASE }}
 ```
 
-Enjoy it!!
+Enjoy it!
