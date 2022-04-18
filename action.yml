@@ -1,4 +1,4 @@
-name: 'SCP Action'
+name: 'SCP Deployment'
 description: 'Copies the files from your repository to a remote host using SCP'
 author: 'Sebastian Rueda'
 inputs:
