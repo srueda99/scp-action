@@ -25,7 +25,7 @@ Use Github secrets to give these parameters.
 **With password**
 ```
 name: copy using password
-uses: srueda99/scp-action@v9
+uses: srueda99/scp-action@v12
 with:
     port: 22
     host: ${{ secrets.SERVER_ADDRESS }}
@@ -37,7 +37,7 @@ with:
 **With key**
 ```
 name: copy using key
-uses: srueda99/scp-action@v9
+uses: srueda99/scp-action@v12
 with:
     port: 22
     host: ${{ secrets.SERVER_ADDRESS }}
@@ -49,7 +49,7 @@ with:
 **With origin folder**
 ```
 name: copy using password
-uses: srueda99/scp-action@v9
+uses: srueda99/scp-action@v12
 with:
     port: 22
     host: ${{ secrets.SERVER_ADDRESS }}
@@ -62,7 +62,7 @@ with:
 **With passphrase**
 ```
 name: copy using key
-uses: srueda99/scp-action@v9
+uses: srueda99/scp-action@v12
 with:
     port: 22
     host: ${{ secrets.SERVER_ADDRESS }}
