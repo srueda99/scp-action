@@ -18,4 +18,4 @@ time=$(date)
 echo "-----------------------------"
 echo "| Files copied successfully |"
 echo "-----------------------------"
-echo "::set-output name=time::$time"
+echo "$time" >> $GITHUB_OUTPUT
