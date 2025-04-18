@@ -9,7 +9,7 @@ if [[ "$INPUT_KEY" ]]; then
     # Runs the SCP command
     scp -P $INPUT_PORT -o StrictHostKeyChecking=no -i key.pem -r $INPUT_ORIGIN "$INPUT_USERNAME"@"$INPUT_HOST":"$INPUT_DESTINATION"
 else
-    # If the keyis empty, it uses the password for the SCP
+    # If the key is empty, it uses the password for the SCP
     echo "Trying SCP process with password"
     # Runs the SCP command
     sshpass -p $INPUT_PASSWORD scp -P $INPUT_PORT -o StrictHostKeyChecking=no -r $INPUT_ORIGIN "$INPUT_USERNAME"@"$INPUT_HOST":"$INPUT_DESTINATION"
