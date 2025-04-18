@@ -1,39 +1,39 @@
-name: 'SCP Deployment'
-description: 'Copies the files from your repository to a remote host using SCP'
-author: 'Sebastian Rueda'
+name: "SCP Deployment"
+description: "Copies the files from your repository to a remote host using SCP"
+author: "Sebastian Rueda"
 inputs:
   # $1
   port:
-    description: 'Port for SCP'
+    description: "Port for SCP"
     default: 22
   # $2
   host:
-    description: 'IP Address or DNS of your target host'
+    description: "IP Address or DNS of your target host"
   # $3
   origin:
-    description: 'Source route folder'
+    description: "Source route folder"
     default: "./*"
   # $4
   destination:
-    description: 'Destination route folder'
+    description: "Destination route folder"
   # $5
   username:
-    description: 'User for remote connection'
+    description: "User for remote connection"
   # $6
   password:
-    description: 'Password for the user'
+    description: "Password for the user"
   # $7
   key:
-    description: 'Private SSH key'
+    description: "Private SSH key"
   # $8
   passphrase:
-    description: 'Passphrase for SSH key'
+    description: "Passphrase for SSH key"
 outputs:
   time:
-    description: 'Returns the time when the script ran'
+    description: "Returns the time when the script ran"
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
 branding:
-  icon: 'send'
-  color: 'black'
+  icon: "send"
+  color: "black"
